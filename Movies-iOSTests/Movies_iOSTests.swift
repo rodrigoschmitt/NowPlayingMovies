@@ -21,16 +21,28 @@ class Movies_iOSTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetMovies() {
+        
+        let expectationMovie = expectation(description: "Expectation for MoviesManager")
+        
+        let moviesManager = MoviesManager()
+        
+        moviesManager.getMovies({ (movies, error) -> () in
+            if error == nil {
+                XCTAssertTrue((movies?.count)! > 0)
+            } else {
+                XCTFail(error.debugDescription)
+            }
+            
+            expectationMovie.fulfill()
+        })
+        
+        waitForExpectations(timeout: 3.0) { (error) in
+            if let error = error {
+                XCTFail(error.localizedDescription)
+            }
         }
+        
     }
     
 }
