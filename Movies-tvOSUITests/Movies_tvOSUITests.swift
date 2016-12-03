@@ -1,6 +1,6 @@
 //
-//  NowPlayingMoviesUITests.swift
-//  NowPlayingMoviesUITests
+//  Movies_tvOSUITests.swift
+//  Movies-tvOSUITests
 //
 //  Created by Rodrigo Andrade on 03/12/16.
 //  Copyright © 2016 DevMac. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class NowPlayingMoviesUITests: XCTestCase {
+class Movies_tvOSUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

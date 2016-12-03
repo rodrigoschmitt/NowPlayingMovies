@@ -1,15 +1,15 @@
 //
-//  NowPlayingMoviesTests.swift
-//  NowPlayingMoviesTests
+//  Movies_iOSTests.swift
+//  Movies-iOSTests
 //
 //  Created by Rodrigo Andrade on 03/12/16.
 //  Copyright © 2016 DevMac. All rights reserved.
 //
 
 import XCTest
-@testable import NowPlayingMovies
+@testable import Movies_iOS
 
-class NowPlayingMoviesTests: XCTestCase {
+class Movies_iOSTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
